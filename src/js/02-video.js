@@ -8,7 +8,10 @@ function onPlay({ seconds }) {
 }
 const currentTime = localStorage.getItem(LOCALSTORAGE_KEY);
 
-player.setCurrentTime(currentTime).then(function (value) {value = currentTime;
+player
+    .setCurrentTime(currentTime)
+    .then(function (value) {
+        value = currentTime;
   })
 .catch(function(error) {
     switch (error.name) {
