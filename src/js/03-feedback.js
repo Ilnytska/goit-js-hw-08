@@ -20,11 +20,12 @@ function onInput(event) {
 };
 
 function onFormSubmit(event) {
+  if (formData) 
+     console.log(formData);
     event.preventDefault();
-
-    console.log('Форма отправлена!');
-    event.currentTarget.reset();
-    localStorage.removeItem(LOCALSTORAGE_KEY);
+localStorage.removeItem(LOCALSTORAGE_KEY);
+        event.currentTarget.reset();
+  
 };
 function onStorageData() {
     const savedData = localStorage.getItem(LOCALSTORAGE_KEY);
