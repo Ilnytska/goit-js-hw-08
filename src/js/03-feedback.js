@@ -21,11 +21,10 @@ function onInput(event) {
 
 function onFormSubmit(event) {
   if (formData) 
-     console.log(formData);
+    console.log(formData);
     event.preventDefault();
-localStorage.removeItem(LOCALSTORAGE_KEY);
-        event.currentTarget.reset();
-  
+    localStorage.removeItem(LOCALSTORAGE_KEY);
+    event.currentTarget.reset();
 };
 function onStorageData() {
     const savedData = localStorage.getItem(LOCALSTORAGE_KEY);
